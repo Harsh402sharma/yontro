@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yontro Style Industrial Website</title>
+    <link rel="icon" type="image/png" href="./assets/Images/favicon-yontro.webp" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
+  
+  <style src="./assets/css/style.css"></style>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+ <style>
+
+  /* PRELOADER FULL SCREEN */
+  #preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #f4f4f4;
+
+    z-index: 999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity 0.8s ease;
+  }
+
+  /* WRAPPER */
+  .wrapper-preloader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* LOGO */
+  .preloader-logo{
+    width: 180px;
+
+    animation: loaderAnimation 2s infinite ease-in-out;
+  }
+
+.shadow-custom{box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19) !important; border-radius:20px; }
+  /* TEXT */
+  .preloader-text{
+    margin-top: 20px;
+animation: loaderAnimation 2s infinite ease-in-out;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    color: rgb(20, 95, 149);
+
+    text-align: center;
+
+    line-height: 1.5;
+  }
+
+  /* ANIMATION */
+  @keyframes loaderAnimation {
+
+    0%{
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
+
+    50%{
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    100%{
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
+
+  }
+
+  /* HIDE PRELOADER */
+  #preloader.hide{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* MOBILE */
+  @media(max-width:768px){
+
+    .preloader-logo{
+      width: 140px;
+    }
+
+    .preloader-text{
+      font-size: 1rem;
+      padding: 0 20px;
+    }
+
+  }
+
+</style>
+</head>
+<body>
+<div id="preloader">
+
+  <div class="wrapper-preloader">
+
+    <!-- LOGO -->
+    <img
+      src="./assets/Images/logo.webp"
+      alt="Logo"
+      class="preloader-logo"
+    />
+
+    <!-- TEXT -->
+    <div class="preloader-text">
+      PCB Assembly Equipment & Conveyor System
+    </div>
+
+  </div>
+
+</div>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-[#fff] shadow-lg z-50">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div>
+           <img src="./assets/Images/logo.webp" alt="Yontro Logo" class="h-8 object-contain" />
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-8 text-white font-medium">
+          <a href="#" class="hover:text-red-400 transition text-[#171C61]">Home</a>
+          <a href="#" class="hover:text-red-400 transition text-[#171C61]">Products</a>
+          <a href="#" class="hover:text-red-400 transition text-[#171C61]">News & Events</a>
+          <a href="#" class="hover:text-red-400 transition text-[#171C61]">About</a>
+          <a href="#" class="hover:text-red-400 transition text-[#171C61]">Contact</a>
+        </div>
+
+        <!-- Mobile Button -->
+        <button id="menuBtn" class="lg:hidden text-white text-3xl">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#123D6A] px-6 pb-6">
+      <div class="flex flex-col gap-4 text-white text-lg">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-28 pb-16 main">
+    <!-- Heading -->
+  <div class="bg-[#D71920] py-3 text-center shadow-lg border-y-8 border-[#0F3D75]">
+    <h1 class="text-white text-2xl md:text-3xl font-bold tracking-wide">
+      <a href="pcb-assembly.html" class="hover:text-gray-200 transition duration-300">PCB Assembly Equipments</a>
+    </h1>
+  </div>
+
+    <!-- Top Carousel -->
+    <div class="swiper topSwiper mt-5 px-4 lg:px-8">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="machine-card bg-white shadow-xl overflow-hidden border-4 border-[#0F3D75]">
+            <img src="./assets/Images/pcb/Wave-Soldering-Machine.jpg" class="w-full h-[200px] md:h-[200px] object-cover" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="machine-card bg-white shadow-xl overflow-hidden border-4 border-[#0F3D75]">
+            <img src="./assets/Images/pcb/Reflow-Soldering-Machine.jpg" class="w-full h-[200px] md:h-[200px] object-cover" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="machine-card bg-white shadow-xl overflow-hidden border-4 border-[#0F3D75]">
+            <img src="./assets/Images/pcb/Loader-Unloader.jpg" class="w-full h-[200px] md:h-[200px] object-cover" />
+          </div>
+        </div>
+        
+        <div class="swiper-slide">
+          <div class="machine-card bg-white shadow-xl overflow-hidden border-4 border-[#0F3D75]">
+            <img src="./assets/Images/pcb/Model-UAP-850-H.png" class="w-full h-[200px] md:h-[200px] object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Second Heading -->
+<div class="bg-[#D71920] py-2 text-center shadow-lg border-y-8 border-[#0F3D75] mt-5">
+  <h2 class="text-white text-2xl md:text-3xl font-bold tracking-wide">
+
+    <a href="conveyor-system.html" class="hover:text-gray-200 transition duration-300">
+      Conveyor Systems
+    </a>
+
+  </h2>
+</div>
+
+    <!-- Bottom Carousel -->
+    <div class="swiper bottomSwiper mt-3 px-4 lg:px-8">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="machine-card bg-white shadow-xl overflow-hidden border-4 border-[#0F3D75]">
+            <img src="./assets/Images/pcb/Conveyor.jpg" class="w-full h-[200px] md:h-[200px] object-cover" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="machine-card bg-white shadow-xl overflow-hidden border-4 border-[#0F3D75]">
+            <img src="./assets/Images/pcb/Conveyor2.png" class="w-full h-[200px] md:h-[200px] object-cover" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="machine-card bg-white shadow-xl overflow-hidden border-4 border-[#0F3D75]">
+            <img src="./assets/Images/pcb/Conveyor3.png" class="w-full h-[200px] md:h-[200px] object-cover" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="machine-card bg-white shadow-xl overflow-hidden border-4 border-[#0F3D75]">
+            <img src="./assets/Images/pcb/roller.png" class="w-full h-[200px] md:h-[200px] object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  
+  <!-- WHAT WE OFFER SECTION -->
+<!-- <section class="py-20 bg-[#f4f4f4]">
+
+  <div class="text-center mb-14">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#171C61]">
+      What we <span class="text-red-500">Offer</span>
+    </h2>
+
+    <div class="w-40 h-1 bg-red-500 mx-auto mt-4"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-10 text-center hover:shadow-xl transition duration-300">
+
+      
+      <div class="flex justify-center mb-8">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/869/869636.png"
+          alt="Conveyor"
+          class="w-20 h-20 object-contain"
+        />
+      </div>
+
+      
+      <h3 class="text-3xl font-bold text-red-500 mb-6">
+        Conveyor System
+      </h3>
+      
+      <p class="text-gray-700 text-md leading-5 max-w-xl mx-auto">
+        Leading manufacturers of a wide variety of conveyors like belt,
+        roller, chain, slat, mesh belt, vertical and gripper conveyors etc.
+        Finding application in assembly, packing, material movement or
+        process conveyors like heating (oven), cooling, ageing or curing
+        conveyor etc.
+      </p>
+      
+      <button class="mt-10 bg-red-500 hover:bg-[#171C61] text-white px-10 py-2 rounded-full text-md font-medium transition duration-300">
+        View all Product
+      </button>
+    </div>
+    
+    <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-10 text-center hover:shadow-xl transition duration-300">
+
+      
+      <div class="flex justify-center mb-8">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png"
+          alt="PCB"
+          class="w-20 h-20 object-contain"
+        />
+      </div>
+      
+      <h3 class="text-3xl font-bold text-red-500 mb-6">
+        PCB Assembly Equipment
+      </h3>
+      
+      <p class="text-gray-700 text-md leading-5 max-w-xl mx-auto">
+        In this section, we offer to our customers a wide range of products
+        for the PCB Assembly Industry. We manufacture a wide gamut of
+        products starting from the basic component forming machine to the
+        fully automated Wave Soldering machines, Reflow Ovens etc.
+      </p>
+      
+      <button class="mt-10 bg-red-500 hover:bg-[#171C61] text-white px-10 py-2 rounded-full text-md font-medium transition duration-300">
+        View all Product
+      </button>
+    </div>
+
+  </div>
+</section> -->
+
+
+<!-- TRENDING PRODUCTS SECTION -->
+<!-- <section class="py-20 bg-[#fff]">
+  
+  <div class="text-center mb-14">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#171C61]">
+      Trending <span class="text-red-500">Products</span>
+    </h2>
+
+    <div class="w-40 h-1 bg-red-500 mx-auto mt-4"></div>
+  </div>
+  
+  <div class="swiper trendingSwiper max-w-7xl mx-auto px-4 relative">
+
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide">
+        <div class="bg-white border border-gray-200 rounded overflow-hidden shadow-sm">
+
+          <img
+            src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-[250px] object-cover"
+          />
+
+          <div class="p-5">
+
+            <h3 class="text-red-500 text-2xl font-semibold mb-4">
+              Roller conveyor
+            </h3>
+
+            <p class="text-gray-700 text-md leading-5">
+              Roller Conveyors are ideally suited for moving products in a
+              manufacturing line or warehouse application efficiently.
+            </p>
+
+            <button class="mt-8 bg-red-500 hover:bg-[#171C61] text-white px-10 py-3 rounded-full text-md font-medium transition duration-300">
+              View
+            </button>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <div class="bg-white border border-gray-200 rounded overflow-hidden shadow-sm">
+
+          <img
+            src="https://images.unsplash.com/photo-1567789884554-0b844b597180?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-[250px] object-cover"
+          />
+
+          <div class="p-5">
+
+            <h3 class="text-red-500 text-2xl font-semibold mb-4">
+              Free flow conveyor
+            </h3>
+
+            <p class="text-gray-700 text-md leading-5">
+              Free flow pallet conveyors are used to carry individual parts
+              between assembly stations in industrial production systems.
+            </p>
+
+            <button class="mt-8 bg-red-500 hover:bg-[#171C61] text-white px-10 py-3 rounded-full text-md font-medium transition duration-300">
+              View
+            </button>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <div class="bg-white border border-gray-200 rounded overflow-hidden shadow-sm">
+
+          <img
+            src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-[250px] object-cover"
+          />
+
+          <div class="p-5">
+
+            <h3 class="text-red-500 text-2xl font-semibold mb-4">
+              Workstation
+            </h3>
+
+            <p class="text-gray-700 text-md leading-5">
+              Industrial workstations are specialized setups designed for
+              assembly operations and efficient manufacturing processes.
+            </p>
+
+            <button class="mt-8 bg-red-500 hover:bg-[#171C61] text-white px-10 py-3 rounded-full text-md font-medium transition duration-300">
+              View
+            </button>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <div class="bg-white border border-gray-200 rounded overflow-hidden shadow-sm">
+
+          <img
+            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-[250px] object-cover"
+          />
+
+          <div class="p-5">
+
+            <h3 class="text-red-500 text-2xl font-semibold mb-4">
+              Slat Conveyor
+            </h3>
+
+            <p class="text-gray-700 text-md leading-5">
+              Slat conveyors use chain-driven slats for transporting heavy
+              industrial materials safely along production lines.
+            </p>
+
+            <button class="mt-8 bg-red-500 hover:bg-[#171C61] text-white px-10 py-3 rounded-full text-md font-medium transition duration-300">
+              View
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    
+    <div class="swiper-button-prev !text-white !w-10 !h-10 bg-red-600 rounded-full"></div>
+    <div class="swiper-button-next !text-white !w-10 !h-10 bg-red-600 rounded-full"></div>
+
+    <div class="swiper-pagination mt-10"></div>
+
+  </div>
+</section> -->
+
+<!-- WHY CHOOSE US SECTION -->
+<section class="py-20 bg-[#f4f4f4] overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-4">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- LEFT CONTENT -->
+      <div class="relative" data-aos="fade-up" data-aos-delay="500">
+
+        <!-- Decorative Dots -->
+        <div class="absolute -left-10 top-10 opacity-20 hidden lg:block">
+          <div class="grid grid-cols-5 gap-3">
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+          </div>
+        </div>
+
+        <!-- Heading -->
+        <div class="mb-8">
+
+          <h2 class="text-3xl md:text-5xl font-bold text-[#171C61]">
+            Why <span class="text-red-500">choose us</span>
+          </h2>
+
+          <div class="w-40 h-1 bg-red-500 mt-4"></div>
+
+        </div>
+
+        <!-- Paragraphs -->
+        <div class="space-y-8 text-gray-800 text-md md:text-md leading-1">
+
+          <p>
+            The age of efficiency is here. It demands absolutely that you
+            extract your money’s worth, from every piece of equipment that
+            you utilize. Throughout the entire Production industry,
+            professionals on the firing line are determined to replace
+            antiquated elements of their facilities, with sophisticated
+            up-to-date equipment.
+          </p>
+
+          <p>
+            Archaic methods and technique are a profit drain, which no one
+            can afford to accept or overlook anymore. Consequently, plants
+            are re-evaluating the importance of bottom line price,
+            considering it less as an end to itself, and more as an element
+            of cost reduction through improved production.
+          </p>
+
+          <p>
+            Production professionals are committed like never before to
+            maximising operational efficiency by upgrading the backward
+            elements of their facilities.
+          </p>
+
+          <p>
+            At Yontro, it is our endeavour to supply the most efficient
+            equipments to the production professionals. Striking the right
+            cord between the cost of equipment, maximum throughput and
+            minimum down time.
+          </p>
+
+        </div>
+        <!-- COUNTERS -->
+        <div class="grid grid-cols-3 md:grid-cols-3 gap-8 mt-14">
+
+          <!-- ITEM -->
+          <div>
+            <h3 class="text-4xl md:text-5xl font-extrabold text-red-500">
+              500+
+            </h3>
+
+            <p class="mt-3 text-lg font-semibold text-[#171C61] leading-7">
+              Projects Completed
+            </p>
+          </div>
+
+          <!-- ITEM -->
+          <div>
+            <h3 class="text-4xl md:text-5xl font-extrabold text-red-500">
+              15+
+            </h3>
+
+            <p class="mt-3 text-lg font-semibold text-[#171C61] leading-7">
+              Years Experience
+            </p>
+          </div>
+
+          <!-- ITEM -->
+          <div>
+            <h3 class="text-4xl md:text-5xl font-extrabold text-red-500">
+              2000+
+            </h3>
+
+            <p class="mt-3 text-lg font-semibold text-[#171C61] leading-7">
+              Machines Delivered
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <!-- RIGHT IMAGES -->
+      <div class="space-y-5" data-aos="fade-left" data-aos-delay="500">
+
+        <!-- Top Image -->
+        <div class="overflow-hidden shadow-lg shadow-custom">
+          <img
+            src="./assets/Images/yontro-staff-team.png"
+            alt=""
+            class="w-full h-[250px] md:h-[320px] object-cover hover:scale-105 transition duration-500"
+          />
+        </div>
+
+        <!-- Bottom Image -->
+        <div class="overflow-hidden shadow-lg shadow-custom">
+          <img
+            src="./assets/Images/yontro-team.jpeg"
+            alt=""
+            class="w-full h-[250px] md:h-[320px] object-cover hover:scale-105 transition duration-500"
+          />
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SWIPER SCRIPT -->
+
+<!-- OUR CLIENTS SECTION -->
+<section class="py-20 bg-[#f4f4f4] overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- LEFT CONTENT -->
+      <div data-aos="fade-up-right" data-aos-delay="300">
+        <!-- Heading -->
+        <div class="mb-8">
+          <h2 class="text-4xl md:text-5xl font-bold text-[#171C61]">
+            Our <span class="text-red-500">Clients</span>
+          </h2>
+          <div class="w-40 h-1 bg-red-500 mt-4"></div>
+
+        </div>
+
+        <!-- Description -->
+        <p class="text-gray-800 text-md md:text-lg leading-9 max-w-2xl">
+          Our personnel, with the years of industry experiences, are making
+          significant contribution towards offering our customers products
+          as per their desired standards of quality.
+        </p>
+
+      </div>
+
+      <!-- RIGHT LOGO SLIDER -->
+      <div class="relative" data-aos="fade-up-left" data-aos-delay="500">
+
+        <div class="swiper clientSwiper">
+
+          <div class="swiper-wrapper">
+
+            <!-- Logo -->
+             <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/continental.webp" alt="continental"
+                  class="h-16 object-contain"
+                />
+              </div>
+            </div>
+
+            <!-- Logo -->
+             <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/alshaya.webp" alt="alshaya"
+                  class="h-16 object-contain"
+                />
+              </div>
+            </div>
+
+            <!-- Logo -->
+            <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/ais.webp"
+                  class="h-16 object-contain"
+                  alt="ais"
+                />
+              </div>
+            </div>
+
+            <!-- Logo -->
+            <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/exide.webp" alt="exide"
+                  class="h-16 object-contain"
+                />
+              </div>
+            </div>
+
+            <!-- Logo -->
+             <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/daimler.webp" alt="daimler"
+                  class="h-16 object-contain"
+                />
+              </div>
+            </div>
+          
+            <!-- Logo -->
+             <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/nykaa.webp" alt="nykaa"
+                  class="h-16 object-contain"
+                />
+              </div>
+            </div>
+          
+            <!-- Logo -->
+             <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/okaya.webp" alt="okaya"
+                  class="h-16 object-contain"
+                />
+              </div>
+            </div>
+            
+            <!-- Logo -->
+             <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/orient.webp" alt="orient"
+                  class="h-16 object-contain"
+                />
+              </div>
+            </div>
+            
+            
+            <!-- Logo -->
+             <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/secure.webp" alt="secure"
+                  class="h-16 object-contain"
+                />
+              </div>
+            </div>
+            
+            
+            <!-- Logo -->
+             <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/topband.webp" alt="topband"
+                  class="h-16 object-contain"
+                />
+              </div>
+            </div>
+            
+            
+            <!-- Logo -->
+             <div class="swiper-slide flex items-center justify-center">
+              <div class="bg-white shadow-md border border-gray-200 p-8 h-[60px] flex items-center justify-center">
+                <img
+                  src="./assets/Images/vvdn.webp" alt="vvdn"
+                  class="h-16 object-contain"
+                />
+              </div>
+            </div>
+
+          </div>
+
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination mt-cust" style="position: relative;margin-top: 1rem;"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT US SECTION -->
+<section class="py-20 bg-[#fff]">
+
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl md:text-5xl font-bold text-[#171C61]" data-aos="fade-up" data-aos-delay="300">
+        Contact <span class="text-red-500">Us</span>
+      </h2>
+      <div class="w-40 h-1 bg-red-500 mx-auto mt-4"></div>
+    </div>
+    <!-- Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+      <!-- LEFT FORM -->
+      <div class="bg-white rounded-2xl shadow-md p-6 md:p-10" data-aos="fade-up-right" data-aos-delay="500">
+
+        <h3 class="text-2xl md:text-3xl font-bold text-black mb-4">
+          Got Any Product Related Queries?
+        </h3>
+
+        <p class="text-gray-700 text-md md:text-lg mb-10">
+          We have dedicated teams to help you find the best offers.
+        </p>
+
+        <!-- Form -->
+        <form class="space-y-5">
+
+          <!-- Row -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <input
+              type="text"
+              placeholder="Name*"
+              class="w-full border border-gray-200 rounded-xl px-5 py-4 outline-none focus:border-[#171C61]"
+            />
+
+            <input
+              type="email"
+              placeholder="Email*"
+              class="w-full border border-gray-200 rounded-xl px-5 py-4 outline-none focus:border-[#171C61]"
+            />
+
+          </div>
+
+          <!-- Row -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <input
+              type="text"
+              placeholder="Phone Number*"
+              class="w-full border border-gray-200 rounded-xl px-5 py-4 outline-none focus:border-[#171C61]"
+            />
+
+            <input
+              type="text"
+              placeholder="Subject*"
+              class="w-full border border-gray-200 rounded-xl px-5 py-4 outline-none focus:border-[#171C61]"
+            />
+
+          </div>
+
+          <!-- Textarea -->
+          <textarea
+            rows="5"
+            placeholder="Messages*"
+            class="w-full border border-gray-200 rounded-xl px-5 py-4 outline-none focus:border-[#171C61]"
+          ></textarea>
+
+          <!-- Button -->
+          <button
+            type="submit"
+            class="bg-[#171C61] hover:bg-red-500 text-white px-12 py-4 rounded-full text-lg font-medium transition duration-300 shadow-lg"
+          >
+            Send
+          </button>
+
+        </form>
+
+      </div>
+
+      <!-- RIGHT MAP -->
+      <div class="overflow-hidden rounded-2xl shadow-md border-2 border-[#171C61]" data-aos="fade-up-left" data-aos-delay="500">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14042.858286009032!2d76.9277554!3d28.3674778!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3e79e3d7afcb%3A0x4c9288412fcfb93c!2sYontro%20Mechatronic%20Systech!5e0!3m2!1sen!2sin!4v1694079632440!5m2!1sen!2sin"
+          width="100%"
+          height="550"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- broucher -->
+<!-- CONTACT & BROCHURE SECTION -->
+<section class="overflow-hidden">
+
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+
+    <!-- LEFT SIDE -->
+    <div class="bg-[#171C61] py-16 px-6 md:px-12 lg:px-20 flex items-center" data-aos="fade-up" data-aos-delay="300">
+      <div class="w-full text-center lg:text-left">
+        <!-- Heading -->
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Contact Us
+        </h2>
+        <!-- Description -->
+        <p class="text-white/90 text-lg md:text-xl leading-8 mb-12">
+          If you have any type of query, feel free to reach out to us
+        </p>
+        <!-- Buttons -->
+        <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+          <!-- Phone -->
+          <a href="tel:+919871008473"
+            class="border-2 border-blue-500 hover:bg-blue-500 text-white px-5 py-5 rounded-full text-md font-semibold transition duration-300 flex items-center justify-center gap-3">
+
+            <span>📞</span>
+            +91-9871008473
+
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:info@yontro.com"
+            class="bg-blue-500 hover:bg-white hover:text-[#171C61] text-white px-5 py-5 rounded-full text-md font-semibold transition duration-300 flex items-center justify-center gap-3">
+
+            <span>✉️</span>
+            info@yontro.com
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div
+      class="relative py-16 px-6 md:px-12 lg:px-20 flex items-center justify-center bg-cover bg-center"
+      style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');"
+      data-aos="fade-up-left"
+      data-aos-delay="500"
+    >
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-r from-red-700/80 via-purple-900/70 to-blue-900/80"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-center">
+
+        <!-- Heading -->
+        <h2 class="text-2xl md:text-4xl font-bold text-white mb-6">
+          Download Brochure
+        </h2>
+
+        <!-- Description -->
+        <p class="text-white/90 text-lg md:text-xl leading-8 max-w-3xl mx-auto mb-12">
+          No matter what type of engineering project you have, we can help.
+          Submit your project today!
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-col sm:flex-row gap-5 justify-center">
+
+          <!-- Button -->
+          <a href="#"
+            class="bg-white hover:bg-red-500 hover:text-white text-red-500 px-5 py-5 rounded-full text-md font-bold transition duration-300 flex items-center justify-center gap-3 shadow-xl">
+
+            <i class="fa fa-file-pdf yontro-color"></i> Conveyor Systems
+
+          </a>
+
+          <!-- Button -->
+          <a href="#"
+            class="bg-white hover:bg-red-500 hover:text-white text-red-500 px-5 py-5 rounded-full text-md font-bold transition duration-300 flex items-center justify-center gap-3 shadow-xl">
+
+            <i class="fa fa-file-pdf yontro-color"></i> PCB Assembly Machine
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- Footer -->
+  <!-- FOOTER SECTION -->
+<footer class="bg-[#f4f4f4] pt-20">
+
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- TOP FOOTER -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 pb-16">
+
+      <!-- LEFT -->
+      <div>
+
+        <!-- Logo -->
+        <div class="mb-8">
+          <img
+          src="./assets/Images/logo.webp"
+          alt="Logo"
+          class="w-24 md:w-28 object-contain" />
+        </div>
+
+        <!-- Description -->
+        <p class="text-gray-800 text-md leading-6 mb-8">
+          Yontro Mechatronic Systech, was established in the year 2013 as a
+          prominent manufacturer of Industrial Machines. We have brought
+          forward these machines in accordance with the industry set
+          standards and with the assurance of efficient performance.
+        </p>
+
+        <!-- Social Icons -->
+
+        <!-- DESKTOP FIXED SOCIAL ICONS -->
+<div class="hidden lg:flex social-fixed">
+<div class="fixed top-1/2 right-0 transform -translate-y-1/2 flex flex-col items-end space-y-4 z-50">
+  <div class="space-y-1 flex flex-col mb-8 sm:block hidden"></div>
+  <div class="flex flex-col space-y-1  sm:block hidden">
+    <a href="https://www.facebook.com/yontro/" target="_blank" rel="noopener noreferrer" class="group relative flex items-center justify-end overflow-hidden">
+    <div class="flex items-center p-2 text-white bg-gradient-to-r from-[#0B53B0] to-[#3390FF]  rounded-l-sm hover:w-28 transition-all duration-300 ease-in-out w-8"><span class="sm"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></span><span class="ml-1.5 text-xs opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity duration-300">Facebook</span></div>
+  </a>
+  <a href="https://www.linkedin.com/company/yontro/" target="_blank" rel="noopener noreferrer" class="group relative flex items-center justify-end overflow-hidden">
+    <div class="flex items-center p-2 text-white bg-gradient-to-r from-[#004182] to-[#0A66C2]  rounded-l-sm hover:w-28 transition-all duration-300 ease-in-out w-8"><span class="sm"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></span><span class="ml-1.5 text-xs opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity duration-300">Linkedin</span></div>
+  </a>
+  <a href="https://www.instagram.com/yontromechatronicsystech/" target="_blank" rel="noopener noreferrer" class="group relative flex items-center justify-end overflow-hidden">
+    <div class="flex items-center p-2 text-white bg-gradient-to-r from-[#DD2A7B] to-[#F58529]  rounded-l-sm hover:w-28 transition-all duration-300 ease-in-out w-8"><span class="sm"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></span><span class="ml-1.5 text-xs opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity duration-300">Instagram</span></div>
+  </a>
+  <a href="https://twitter.com/Yontro_01" target="_blank" rel="noopener noreferrer" class="group relative flex items-center justify-end overflow-hidden">
+    <div class="flex items-center p-2 text-white bg-gradient-to-r from-[#BB0000] to-[#FF0000]  rounded-l-sm hover:w-28 transition-all duration-300 ease-in-out w-8"><span class="sm"><svg
+        stroke="currentColor"
+        fill="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg">
+
+        <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26 48h145.6l100.7 132.9L389.2 48zm-24.8 373.8h39.1L150.4 88h-42l256 333.8z"></path>
+
+      </svg></span><span class="ml-1.5 text-xs opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity duration-300">twitter</span></div>
+  </a>
+</div>
+</div>
+
+</div>
+
+
+<!-- MOBILE FOOTER SOCIAL -->
+<div
+  class="lg:hidden fixed bottom-0 left-0 w-full bg-[#171C61] z-50 shadow-2xl">
+
+  <div class="flex items-center justify-around py-3">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/yontro/" class="text-white text-2xl">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://twitter.com/Yontro_01" class="text-white text-2xl">
+      <i class="fa-brands fa-square-x-twitter"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/yontromechatronicsystech/" class="text-white text-2xl">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://www.linkedin.com/company/yontro/" class="text-white text-2xl">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+  </div>
+
+</div>
+
+
+
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div>
+
+        <h3 class="text-3xl font-bold text-black mb-8">
+          Quick Link
+        </h3>
+
+        <ul class="space-y-3 text-gray-800 text-sm">
+
+          <li class="hover:text-red-500 transition duration-300 cursor-pointer">
+            ➜ Home
+          </li>
+
+          <li class="hover:text-red-500 transition duration-300 cursor-pointer">
+            ➜ News & Events
+          </li>
+
+          <li class="hover:text-red-500 transition duration-300 cursor-pointer">
+            ➜ Blogs
+          </li>
+
+          <li class="hover:text-red-500 transition duration-300 cursor-pointer">
+            ➜ Infrastructure
+          </li>
+
+          <li class="hover:text-red-500 transition duration-300 cursor-pointer">
+            ➜ Contact Us
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div>
+
+        <h3 class="text-3xl font-bold text-black mb-8">
+          Contact Info
+        </h3>
+
+        <div class="space-y-4 text-gray-800 text-lg">
+
+          <!-- Address -->
+          <div class="flex gap-2">
+
+            <div class="text-[#171C61] text-sm mt-1">
+              📍
+            </div>
+
+            <p class="leading-6">
+              Plot No. 126, Sector 5, IMT Manesar,
+              Gurugram, Haryana - 122050, India
+            </p>
+
+          </div>
+
+          <!-- Email -->
+          <div class="flex gap-2">
+
+            <div class="text-[#171C61] text-sm">
+              ✉️
+            </div>
+
+            <p>
+              info@yontro.com
+            </p>
+
+          </div>
+
+          <!-- Phone -->
+          <div class="flex gap-2">
+
+            <div class="text-[#171C61] text-sm">
+              ☎️
+            </div>
+
+            <div>
+              <p>+91 987 1008 473</p>
+              <p>+91 971-738-9287</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM FOOTER -->
+  <div class="bg-[#171C61] py-6">
+
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-white text-md">
+
+        <p class="text-center md:text-left">
+          Copyright © 2026 Yontro, India. All rights reserved
+        </p>
+
+        <p class="text-center md:text-right">
+          Powered by Netleaf Software
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- FONT AWESOME -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script src="./assets/javascript/script.js"></script>
+<script>
+
+  // WAIT FULL PAGE LOAD
+  window.onload = function () {
+
+    // 5 SEC DELAY
+    setTimeout(function(){
+
+      document.getElementById("preloader").classList.add("hide");
+
+    }, 5000);
+
+  };
+
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
